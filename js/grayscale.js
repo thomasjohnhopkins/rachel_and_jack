@@ -50,14 +50,14 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(35.125665, -90.017826), // Annesdale Mansion
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
         scrollwheel: false,
-        draggable: false,
+        draggable: true,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "water",
@@ -169,19 +169,35 @@ function init() {
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
 
     // Create the Google Map using out element and options defined above
     map = new google.maps.Map(mapElement, mapOptions);
 
+    // Annesdale Mansion Info
+    var contentString =
+      '<div id="bodyContent" style="color:black;width:300px">'+
+      '<p style="font-size: 14px; margin: 0 0 5px"><b>Annesdale Mansion</b></p>' +
+      '<p style="font-size: 14px; margin: 0 0 5px">1325 Lamar Ave</p>'+
+      '<p style="font-size: 14px; margin: 0 0 5px">Memphis, TN 38104</p>'+
+      '<p style="font-size: 14px; margin: 0 0 5px">(901) 490-9460</p>'+
+      '<p style="font-size: 14px; margin: 0 0 5px"><a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">Website</a></p>' +
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
-    var beachMarker = new google.maps.Marker({
+    var myLatLng = new google.maps.LatLng(35.125665, -90.017826);
+    var locationMarker = new google.maps.Marker({
         position: myLatLng,
-        map: map,
-        icon: image
+        map: map
+    });
+    locationMarker.addListener('click', function() {
+      infowindow.open(map, locationMarker);
     });
 }
