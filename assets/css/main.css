@@ -1454,6 +1454,20 @@
 		text-decoration: none;
 	}
 
+	#non-dotted {
+		-moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		transition: color 0.2s ease, border-bottom-color 0.2s ease;
+		color: inherit;
+		border-bottom: none;
+		text-decoration: none;
+	}
+
+	#non-dotted:hover {
+		color: #aaa;
+	}
+
 		a:hover {
 			border-bottom-color: transparent;
 		}
@@ -2527,19 +2541,19 @@
 		}
 
 		.spotlight:nth-child(1) {
-			background-color: #aaa;
+			background-color: #fff;
 		}
 
 		.spotlight:nth-child(2) {
-			background-color: #aaa;
+			background-color: #fff;
 		}
 
 		.spotlight:nth-child(3) {
-			background-color: #aaa;
+			background-color: #fff;
 		}
 
 		.spotlight:nth-child(4) {
-			background-color: #aaa;
+			background-color: #fff;
 		}
 
 		.spotlight:nth-child(5) {
@@ -3811,4 +3825,8 @@
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
+	}
+
+	.content h2, .content p {
+		color: #000;
 	}
