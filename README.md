@@ -1,6 +1,8 @@
-## Rachel and Jack's Wedding website
+# Rachel and Jack's Wedding website
 
 They're a pretty dope couple.
+
+## Rachel work flow instructions
 
 
 ## Template info
