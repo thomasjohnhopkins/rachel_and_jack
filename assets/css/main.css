@@ -2515,7 +2515,7 @@
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
-			width: 40%;
+			width: 50%;
 		}
 
 			.spotlight .image img {
@@ -2530,7 +2530,7 @@
 			-ms-order: 2;
 			order: 2;
 			max-width: 48em;
-			width: 60%;
+			width: 50%;
 		}
 
 		.spotlight:nth-child(2n) {
@@ -2555,6 +2555,34 @@
 		.spotlight:nth-child(4) {
 			background-color: #fff;
 		}
+
+		.spotlight:nth-child(4) .image-right {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 50%;
+		}
+
+		.spotlight:nth-child(4) .image-left {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 50%;
+		}
+
+			.spotlight .image-left img {
+				border-radius: 0;
+				width: 100%;
+			}
+
+			.spotlight .image-right img {
+				border-radius: 0;
+				width: 100%;
+			}
 
 		.spotlight:nth-child(5) {
 			background-color: rgba(0, 0, 0, 0.375);
@@ -2583,11 +2611,11 @@
 		@media screen and (max-width: 1280px) {
 
 			.spotlight .image {
-				width: 45%;
+				width: 50%;
 			}
 
 			.spotlight .content {
-				width: 55%;
+				width: 50%;
 			}
 
 		}
