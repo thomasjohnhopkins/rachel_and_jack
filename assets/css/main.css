@@ -2562,7 +2562,7 @@
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
-			width: 50%;
+			width: 25%;
 		}
 
 		.spotlight:nth-child(4) .image-left {
@@ -2571,17 +2571,19 @@
 			-ms-order: 1;
 			order: 1;
 			border-radius: 0;
-			width: 50%;
+			width: 25%;
 		}
 
 			.spotlight .image-left img {
 				border-radius: 0;
 				width: 100%;
+				float: left;
 			}
 
 			.spotlight .image-right img {
 				border-radius: 0;
 				width: 100%;
+				float: right;
 			}
 
 		.spotlight:nth-child(5) {
@@ -2654,7 +2656,8 @@
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0 ;
+		padding: 3em 0 1em 0 ;
+		/*was 6em 0 4em 0 ;*/
 	}
 
 		.wrapper > .inner {
@@ -3858,3 +3861,11 @@
 	.content h2, .content p {
 		color: #000;
 	}
+
+	/* --- CLEARFIX --- */
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
