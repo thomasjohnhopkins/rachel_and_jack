@@ -2653,6 +2653,149 @@
 
 		}
 
+/* Spotlightish */
+
+	.spotlightish {
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+	}
+
+		.spotlightish .image1 {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			float: left;
+			width: 33%
+		}
+
+		.spotlightish .image2 {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			float: right;
+			width: 33%;
+		}
+
+			.spotlightish .image1 img {
+				border-radius: 0;
+				width: 100%;
+			}
+
+			.spotlightish .image2 img {
+				border-radius: 0;
+				width: 100%;
+			}
+
+		.spotlightish .content {
+			padding: 2em 4em 0.1em 4em ;
+			-moz-order: 2;
+			-webkit-order: 2;
+			-ms-order: 2;
+			order: 2;
+			max-width: 48em;
+			width: 33%;
+		}
+
+		/*.spotlightish:nth-child(2n) {
+			-moz-flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			-ms-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+		}*/
+
+		.spotlightish:nth-child(3) {
+			background-color: #fff;
+		}
+
+		.spotlightish:nth-child(4) {
+			background-color: #fff;
+		}
+
+		.spotlightish:nth-child(4) .image-right {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 25%;
+		}
+
+		.spotlightish:nth-child(4) .image-left {
+			-moz-order: 1;
+			-webkit-order: 1;
+			-ms-order: 1;
+			order: 1;
+			border-radius: 0;
+			width: 25%;
+		}
+
+			.spotlightish .image-left img {
+				border-radius: 0;
+				width: 100%;
+			}
+
+			.spotlightish .image-right img {
+				border-radius: 0;
+				width: 100%;
+			}
+
+		.spotlightish:nth-child(5) {
+			background-color: rgba(0, 0, 0, 0.375);
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.spotlightish .image {
+				width: 50%;
+			}
+
+			.spotlightish .content {
+				width: 50%;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.spotlightish {
+				display: block;
+			}
+
+				.spotlightish br {
+					display: none;
+				}
+
+				.spotlightish .image {
+					width: 100%;
+				}
+
+				.spotlightish .content {
+					padding: 4em 3em 2em 3em ;
+					max-width: none;
+					text-align: center;
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.spotlightish .content {
+				padding: 3em 2em 1em 2em ;
+			}
+
+		}
+
 /* Wrapper */
 
 	.wrapper {
