@@ -37,7 +37,6 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="when_and_where.html">When & Where</a></li>
 											<li><a href="memphis.html">Memphis</a></li>
 											<li><a href="hotels.html">Hotels</a></li>
 											<li><a href="registry.html">Registry</a></li>
@@ -52,37 +51,43 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Photo Gallery</h2>
+							<h2>Gallery</h2>
 						</header>
 						<section class="wrapper style5">
+							<div class="group" style="max-width:300px;margin: 0 auto">
+								<div style="float:left;font-size: 5.25rem" onClick="goBack()">
+									<i class="fa fa-angle-double-left" aria-hidden="true" style="color:#aaa"></i>
+								</div>
+								<div style="float:right;font-size: 5.25rem" onclick="goForward()">
+									<i class="fa fa-angle-double-right" aria-hidden="true" style="color:#aaa"></i>
+								</div>
+							</div>
+							<br />
 							<div class="gallery" align="center">
-
-								<h3>The Lovely Couple, Friends, and Family</h3>
-
 								<div class="preview" align="center">
 					        <img id="preview" src="images/photo_gallery/1.jpg" alt="No Image Loaded"/>
 					      </div><br/>
-
-					      <div class="thumbnails">
-					        <img onclick="changeImage(1)" id="img1" src="images/photo_gallery/1.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(2)" id="img2" src="images/photo_gallery/2.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(3)" id="img3" src="images/photo_gallery/3.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(4)" id="img4" src="images/photo_gallery/4.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(5)" id="img5" src="images/photo_gallery/5.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(6)" id="img6" src="images/photo_gallery/6.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(7)" id="img6" src="images/photo_gallery/7.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(8)" id="img6" src="images/photo_gallery/8.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(9)" id="img6" src="images/photo_gallery/9.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(10)" id="img6" src="images/photo_gallery/10.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(11)" id="img6" src="images/photo_gallery/11.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(12)" id="img6" src="images/photo_gallery/12.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(13)" id="img6" src="images/photo_gallery/13.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(14)" id="img6" src="images/photo_gallery/14.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(15)" id="img6" src="images/photo_gallery/15.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(16)" id="img6" src="images/photo_gallery/16.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(17)" id="img6" src="images/photo_gallery/17.jpg" alt="Image Not Loaded"/>
-					        <img onclick="changeImage(18)" id="img6" src="images/photo_gallery/18.jpg" alt="Image Not Loaded"/>
-					      </div><br/>
+<!--
+						      <div class="thumbnails">
+						        <img onclick="changeImage(1)" id="img1" src="images/photo_gallery/1.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(2)" id="img2" src="images/photo_gallery/2.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(3)" id="img3" src="images/photo_gallery/3.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(4)" id="img4" src="images/photo_gallery/4.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(5)" id="img5" src="images/photo_gallery/5.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(6)" id="img6" src="images/photo_gallery/6.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(7)" id="img6" src="images/photo_gallery/7.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(8)" id="img6" src="images/photo_gallery/8.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(9)" id="img6" src="images/photo_gallery/9.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(10)" id="img6" src="images/photo_gallery/10.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(11)" id="img6" src="images/photo_gallery/11.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(12)" id="img6" src="images/photo_gallery/12.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(13)" id="img6" src="images/photo_gallery/13.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(14)" id="img6" src="images/photo_gallery/14.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(15)" id="img6" src="images/photo_gallery/15.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(16)" id="img6" src="images/photo_gallery/16.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(17)" id="img6" src="images/photo_gallery/17.jpg" alt="Image Not Loaded"/>
+						        <img onclick="changeImage(18)" id="img6" src="images/photo_gallery/18.jpg" alt="Image Not Loaded"/>
+						      </div><br/> -->
 
 					    </div>
 						</section>
@@ -106,9 +111,33 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-				function changeImage(index) {
+				function goBack() {
+					srcString = $('#preview').attr("src")
+
+					index = parseInt(srcString.split('/')[2].split('.')[0])
+
+					if (index === 1) {
+						index = 19
+					} else {
+						index = index - 1
+					}
+
 					$('#preview').attr("src", "images/photo_gallery/" + index + ".jpg")
-				}
+				};
+
+				function goForward() {
+					srcString = $('#preview').attr("src")
+
+					index = parseInt(srcString.split('/')[2].split('.')[0])
+
+					if (index === 19) {
+						index = 1
+					} else {
+						index = index + 1
+					}
+
+					$('#preview').attr("src", "images/photo_gallery/" + index + ".jpg")
+				};
 			</script>
 
 
