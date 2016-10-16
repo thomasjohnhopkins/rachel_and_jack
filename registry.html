@@ -53,21 +53,19 @@
 							<h2>Registry</h2>
 						</header>
 						<section id="one" class="wrapper style1 special">
-							<div class="row uniform 100%">
-								<div class="12u center">
+							<div class="image-container">
+								<div class="center">
 									<span class="image">
 										<a href="http://www.zola.com/registry/rachelmcandjack">
-											<img class="" src="images/zola-logo-black.jpg" alt="" />
+											<img class="big-image" src="images/zola-logo-black.jpg" alt="" />
 										</a>
 									</span>
 								</div>
-							</div>
-							<br/>
-							<div class="row uniform 100%">
-								<div class="12u center">
+								<br/>
+								<div class="center">
 									<span class="image">
 										<a href="http://secure.williams-sonoma.com/registry/xlhxxmknr9/registry-list.html">
-											<img class="" src="images/Williams-Sonoma-logo.jpg" alt="" />
+											<img class="big-image" src="images/Williams-Sonoma-logo.jpg" alt="" />
 										</a>
 									</span>
 								</div>
@@ -107,6 +105,43 @@
 			div.center {
     		display: block;
     		margin: 0 auto;
+				max-width: 75%;
+			}
+
+			.big-image {
+    		max-width: 400px;
+			}
+
+			@media screen and (max-width: 1680px) {
+
+				.big-image {
+					max-width: 600px;
+				}
+
+			}
+
+			@media screen and (max-width: 1280px) {
+
+				.big-image {
+					max-width: 450px;
+				}
+
+			}
+
+			@media screen and (max-width: 980px) {
+
+				.big-image {
+					max-width: 400px;
+				}
+
+			}
+
+			@media screen and (max-width: 736px) {
+
+				.big-image {
+					max-width: 250px ;
+				}
+
 			}
 			</style>
 
