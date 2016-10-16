@@ -54,19 +54,20 @@
 							<h2>Gallery</h2>
 						</header>
 						<section class="wrapper style5">
-							<div class="group" style="max-width:300px;margin: 0 auto">
-								<div style="float:left;font-size: 5.25rem" onClick="goBack()">
-									<i class="fa fa-angle-double-left arrows" aria-hidden="true"></i>
+							<div class="gallery-container">
+								<div class="arrow-container group" style="margin: 0 auto;">
+									<div style="float:left;font-size: 4.25rem" onClick="goBack()">
+										<i class="fa fa-angle-double-left arrows arrow-left" aria-hidden="true"></i>
+									</div>
+									<div style="float:right;font-size: 4.25rem" onclick="goForward()">
+										<i class="fa fa-angle-double-right arrows arrow-right" aria-hidden="true"></i>
+									</div>
 								</div>
-								<div style="float:right;font-size: 5.25rem" onclick="goForward()">
-									<i class="fa fa-angle-double-right arrows" aria-hidden="true"></i>
-								</div>
-							</div>
-							<br />
-							<div class="gallery" align="center">
-								<div class="preview" align="center">
-					        <img id="preview" src="images/photo_gallery/1.jpg" alt="No Image Loaded"/>
-					      </div><br/>
+								<br />
+								<div class="gallery">
+									<div class="preview">
+						        <img id="preview" src="images/photo_gallery/1.jpg" alt="No Image Loaded"/>
+						      </div><br/>
 <!--
 						      <div class="thumbnails">
 						        <img onclick="changeImage(1)" id="img1" src="images/photo_gallery/1.jpg" alt="Image Not Loaded"/>
@@ -88,7 +89,7 @@
 						        <img onclick="changeImage(17)" id="img6" src="images/photo_gallery/17.jpg" alt="Image Not Loaded"/>
 						        <img onclick="changeImage(18)" id="img6" src="images/photo_gallery/18.jpg" alt="Image Not Loaded"/>
 						      </div><br/> -->
-
+								</div>
 					    </div>
 						</section>
 						<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1QCKf6zi-kx22fBte31Xr8to_3h1YPKNN2eqciq-728Pkhw/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
@@ -150,7 +151,7 @@
         color: #eee;
       }
 
-      .thumbnails img {
+      /*.thumbnails img {
         height: 80px;
         border: 4px solid #aaa;
         padding: 1px;
@@ -160,12 +161,12 @@
       .thumbnails img:hover {
         border: 4px solid #eee;
         cursor:pointer;
-      }
+      }*/
 
       .preview img {
         border: 4px solid #aaa;
         padding: 1px;
-        width: 400px;
+        width: 600px;
       }
 
 			.arrows {
@@ -174,7 +175,94 @@
 
 			.arrows:hover {
 				cursor: pointer;
-				color: #596163;
+				color: #596163	;
+			}
+
+			.gallery {
+				margin: 0 auto;
+			}
+
+			.preview {
+				margin: 0 auto;
+			}
+
+			/*.gallery-container {
+    		max-width: 400px;
+			}*/
+
+			@media screen and (max-width: 1680px) {
+
+				.gallery-container {
+					max-width: 900px;
+					margin: 0 auto;
+				}
+
+				.preview img {
+					display: block;
+					max-width: 900px;
+					margin: 0 auto;
+				}
+
+				.arrow-container {
+					max-width: 200px;
+				}
+			}
+
+			@media screen and (max-width: 1280px) {
+
+				.gallery-container {
+					max-width: 700px;
+					margin: 0 auto;
+				}
+
+				.preview img {
+					display: block;
+					max-width: 700px;
+					margin: 0 auto;
+				}
+
+				.arrow-container {
+					max-width: 200px;
+				}
+
+			}
+
+			@media screen and (max-width: 980px) {
+
+				.gallery-container {
+					max-width: 500px;
+					margin: 0 auto;
+				}
+
+				.preview img {
+					display: block;
+					max-width: 500px;
+					margin: 0 auto;
+				}
+
+				.arrow-container {
+					max-width: 200px;
+				}
+
+			}
+
+			@media screen and (max-width: 736px) {
+
+				.gallery-container {
+					max-width: 300px;
+					margin: 0 auto;
+				}
+
+				.preview img {
+					display: block;
+					max-width: 300px;
+					margin: 0 auto;
+				}
+
+				.arrow-container {
+					max-width: 300px;
+				}
+
 			}
     </style>
 
